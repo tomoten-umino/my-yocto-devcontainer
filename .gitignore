@@ -121,3 +121,8 @@ tags
 .ionide
 
 # End of https://www.toptal.com/developers/gitignore/api/visualstudiocode,vim,linux,emacs,git
+
+# User settings
+build*
+meta-*
+poky*

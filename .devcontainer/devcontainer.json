@@ -1,0 +1,28 @@
+{
+    "name": "yocto devcontainer",
+    "build": {
+      "dockerfile": "Dockerfile"
+    },
+    "runArgs": [
+      "--network=host",
+      "--cap-add=SYS_PTRACE",
+      "--security-opt",
+      "seccomp=unconfined"
+    ],
+    "remoteUser": "dev",
+      "updateRemoteUserUID": true,
+      "workspaceMount": "source=${localWorkspaceFolder},target=/workdir,type=bind",
+      "workspaceFolder": "/workdir",
+      "customizations": {
+      "vscode": {
+        "extensions": [
+          "yocto-project.yocto-bitbake",
+          "mads-hartmann.bash-ide-vscode",
+          "ms-python.python",
+          "timonwong.shellcheck"
+        ],
+        "settings": {}
+      }
+    }
+  }
+  
